@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.Experimental.U2D;
 using Unity.VectorGraphics;
+using UnityEngine.U2D;
 using Unity.Collections;
 using System;
 using System.Linq;

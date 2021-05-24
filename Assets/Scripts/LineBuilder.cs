@@ -22,10 +22,13 @@ public class LineBuilder : ShapeBuilderBase
         var lineSegment = VectorUtils.MakeLine(from, to);
         var lineSegmentPath = VectorUtils.BezierSegmentToPath(lineSegment);
 
+        foreach (var seg in lineSegmentPath)
+            Debug.Log($"{seg.P0}, {seg.P1}, {seg.P2}");
+
         var path = new Shape() {
             Contours = new BezierContour[]{ new BezierContour() { Segments = lineSegmentPath } },
             PathProps = new PathProperties() {
-                Stroke = new Stroke() { Color = pathColor, HalfThickness = pathHalfThickness }
+                Stroke = new Stroke() { Color = pathColor, HalfThickness = pathHalfThickness, }
             }
         };
 
